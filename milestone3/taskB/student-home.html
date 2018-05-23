@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <title>Office Hours | Home</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav class="navbar">
+            <ul>
+                <li id="title">
+                    <a href="index.php">
+                        <h1>Home</h1>
+                    </a>
+                </li>
+
+                <li id="nav1">
+                    <a href="#">LINK</a>
+                </li>
+                <li id="nav2">
+                    <a href="includes/logout.php">Log Out</a>
+                </li>
+            </ul>
+        </nav>
+
+        <h2>Welcome Zubair </h2>
+
+
+        <section id="view">
+            <h3>Your Dashboard</h3>
+            <a href="?view=student-appointment">Schedule an appointment</a>
+            <div class="dashboard">
+                <div id=#item1>
+                    <h4>Curent Appointments: </h4>
+                    <table>
+                        <tr>
+                            <th>Professor</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Purpose</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id=#item2>
+                    <h4>Today: </h4>
+                    <ul>
+                        <li>Professor: </li>
+                        <li>Date: </li>
+                        <li>Time: </li>
+                        <li>Purpose: </li>
+                        <li>Status: </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+    <script>
+        showView();
+
+        function showView() {
+            $(document).ready(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "student-home.php",
+                    success: function (result) {
+                        $("#view").html(result);
+                    }
+                });
+            });
+        }
+    </script>
+
+
+</body>
+
+</html>

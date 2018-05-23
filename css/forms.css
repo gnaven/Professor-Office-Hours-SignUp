@@ -1,0 +1,96 @@
+form {
+	grid-area: form;
+	justify-self: center;
+	align-self: center;
+}
+
+.form-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 100px 1fr 150px;
+	grid-template-areas: " . . ." " . form ." " . . .";
+}
+
+form {
+	border: 2px solid #000;
+	background-color: #fff;
+	padding: 1em 2em;
+	margin: auto;
+	clear: both;
+	max-width: 1000px;
+}
+
+form input {
+	padding: 3px 5px;
+	box-sizing: border-box;
+}
+
+form label {
+	padding: 3px 5px;
+	box-sizing: border-box;
+}
+
+form small {
+	font-size: 0.7em;
+	color: #5a5a5a;
+	display: block;
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+form div {
+	margin-bottom: 0.5em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+	padding: 12px;
+	width: 100%;
+	min-width: 350px;
+	margin-top: 0.25em;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input:focus {
+	box-shadow: 0 0 3px #000;
+}
+
+form button {
+	width: 100%;
+	padding: 8px;
+}
+
+form button:hover {
+	box-shadow: 0 0 3px #154360;
+}
+
+form h2 {
+	text-align: center;
+}
+
+.reveal-if-active {
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+}
+
+input[type="radio"]:checked ~ .reveal-if-active {
+	opacity: 1;
+	max-height: 100px; /* little bit of a magic number :( */
+	overflow: visible;
+}
+
+#login {
+	background-image: url("../images/bg.JPG");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#signup {
+	background-image: url("../images/bg.JPG");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
