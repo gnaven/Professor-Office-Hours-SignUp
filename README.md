@@ -1,4 +1,4 @@
-# Professor-Office-Hours-SignUp# CSC261 - Database Systems
+# Professor-Office-Hours-SignUp
 
 ## Office Hours App
 
